@@ -145,6 +145,46 @@ hist(ihme$newICU_mean[ihme$state == "New York"], col = rgb(1,0,1,0.5), main = "A
 hist(ihme$newICU_mean[ihme$state == "Pennsylvania"], col = rgb(0,1,1,0.5), main = "Average New Daily ICU Admission in Pennsylvania", xlab = "Pennsylvania(06/01 - 08/04/2020)", xlim = c(0, 150), breaks = 10)
 hist(ihme$newICU_mean[ihme$state == "United States of America"], col = rgb(1,1,0,0.5), main = "Average New Daily ICU Admission in United States", xlab = "United States(06/01 - 08/04/2020)", xlim = c(0, 1500), breaks = 10)
 
+
+## Pie Chart of Population by Race in State ##
+capop <- read.csv("Cali_Population.csv", header = T)
+capop$Race <- as.factor(capop$Race)
+capop$Population <- as.numeric(capop$Population)
+capop$Total.Percentage < as.numeric(capop$Total.Percentage)
+summary(capop)
+pie(capop$Population[capop$Race != "All Races"], labels = capop$Race[capop$Race != "All Races"], main="Population by Race in California")
+
+mapop <- read.csv("MA_Population.csv", header = T)
+mapop$Race <- as.factor(mapop$Race)
+mapop$Population <- as.numeric(mapop$Population)
+mapop$Total.Percentage < as.numeric(mapop$Total.Percentage)
+summary(mapop)
+pie(mapop$Population[mapop$Race != "Total Population"], labels = mapop$Race[mapop$Race != "Total Population"], main="Population by Race in Masschusetts")
+
+njpop <- read.csv("NJ_Population.csv", header = T)
+njpop$Race <- as.factor(njpop$Race)
+njpop$Population <- as.numeric(njpop$Population)
+njpop$Total.Percentage < as.numeric(njpop$Total.Percentage)
+summary(njpop)
+pie(njpop$Population[njpop$Race != "Total Population"], labels = njpop$Race[njpop$Race != "Total Population"], main="Population by Race in New Jersey")
+
+nypop <- read.csv("NY_Population.csv", header = T)
+nypop$Race <- as.factor(nypop$Race)
+nypop$Population <- as.numeric(nypop$Population)
+nypop$Total.Percentage < as.numeric(nypop$Total.Percentage)
+summary(nypop)
+pie(nypop$Population[nypop$Race != "Total Population"], labels = nypop$Race[nypop$Race != "Total Population"], main="Population by Race in New York")
+
+papop <- read.csv("PA_Population.csv", header = T)
+papop$Race <- as.factor(papop$Race)
+papop$Population <- as.numeric(papop$Population)
+papop$Total.Percentage < as.numeric(papop$Total.Percentage)
+summary(papop)
+pie(papop$Population[papop$Race != "Total Population"], labels = papop$Race[papop$Race != "Total Population"], main="Population by Race in Pennsylvania")
+
+
+
+
 library(UsingR)
 
 #plot pneumonia by covid
