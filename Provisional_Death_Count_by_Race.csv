@@ -1,0 +1,183 @@
+state,age ,race ,covid,tot_death,pneumonia,pneum_covid,influenza ,pneu_flu_covid
+California,25-34 years,White,,637,16,,,22
+California,35-44 years,White,,846,27,,,35
+California,45-54 years,White,23,1881,120,10,15,148
+California,55-64 years,White,59,5214,366,34,50,441
+California,65-74 years,White,143,8973,753,79,63,880
+California,75-84 years,White,254,12303,1111,153,73,1285
+California,85 years and over,White,350,18668,1464,203,74,1685
+California,25-34 years,Black,,219,,,,10
+California,35-44 years,Black,,285,13,,,20
+California,45-54 years,Black,12,542,37,,0,48
+California,55-64 years,Black,29,1233,75,14,12,102
+California,65-74 years,Black,57,1497,147,33,10,181
+California,75-84 years,Black,56,1397,143,31,0,175
+California,85 years and over,Black,62,1324,156,38,0,184
+California,25-34 years,Asian,,118,,,,
+California,35-44 years,Asian,1,206,15,,0,16
+California,45-54 years,Asian,,441,26,,,35
+California,55-64 years,Asian,35,918,77,19,16,109
+California,65-74 years,Asian,72,1536,184,38,,226
+California,75-84 years,Asian,91,2304,293,53,18,349
+California,85 years and over,Asian,173,3815,511,92,,601
+California,25-34 years,More race,,39,0,0,0,
+California,35-44 years,More race,0,57,,0,,
+California,45-54 years,More race,,72,,0,,
+California,55-64 years,More race,,149,,0,,11
+California,65-74 years,More race,,136,11,,0,12
+California,75-84 years,More race,,160,19,,,21
+California,85 years and over,More race,,130,10,0,,14
+California,25-34 years,Hispanic,,723,26,,,39
+California,35-44 years,Hispanic,45,931,85,24,10,116
+California,45-54 years,Hispanic,82,1506,119,40,23,184
+California,55-64 years,Hispanic,142,2686,282,79,33,378
+California,65-74 years,Hispanic,179,3213,354,110,25,447
+California,75-84 years,Hispanic,178,3554,430,124,25,509
+California,85 years and over,Hispanic,179,4411,536,104,24,635
+Massachusetts,25-34 years,White,,250,,,,11
+Massachusetts,35-44 years,White,,374,10,,,19
+Massachusetts,45-54 years,White,38,680,37,12,,68
+Massachusetts,55-64 years,White,188,1851,189,90,19,304
+Massachusetts,65-74 years,White,537,3377,444,201,24,804
+Massachusetts,75-84 years,White,1104,5163,830,442,40,1532
+Massachusetts,85 years and over,White,2095,8645,1309,710,44,2735
+Massachusetts,25-34 years,Black,,36,,0,0,
+Massachusetts,35-44 years,Black,,49,,,0,
+Massachusetts,45-54 years,Black,20,86,1,,0,21
+Massachusetts,55-64 years,Black,49,222,33,18,,66
+Massachusetts,65-74 years,Black,79,268,48,26,,103
+Massachusetts,75-84 years,Black,124,352,75,43,,158
+Massachusetts,85 years and over,Black,135,374,55,42,,149
+Massachusetts,25-34 years,Asian,,10,0,0,0,
+Massachusetts,35-44 years,Asian,,10,,0,0,
+Massachusetts,45-54 years,Asian,,28,0,0,0,
+Massachusetts,55-64 years,Asian,,57,,,0,11
+Massachusetts,65-74 years,Asian,28,93,19,15,0,32
+Massachusetts,75-84 years,Asian,38,152,21,11,0,48
+Massachusetts,85 years and over,Asian,70,216,43,26,,90
+Massachusetts,25-34 years,Hispanic,,50,,,,
+Massachusetts,35-44 years,Hispanic,10,81,,,,15
+Massachusetts,45-54 years,Hispanic,25,116,12,,0,29
+Massachusetts,55-64 years,Hispanic,49,179,32,24,,59
+Massachusetts,65-74 years,Hispanic,59,193,38,27,,71
+Massachusetts,75-84 years,Hispanic,102,257,58,42,,120
+Massachusetts,85 years and over,Hispanic,67,193,28,15,,80
+New Jersey,25-34 years,White,13,244,11,,,17
+New Jersey,35-44 years,White,34,336,24,12,,47
+New Jersey,45-54 years,White,92,751,72,45,,121
+New Jersey,55-64 years,White,382,2063,302,197,,494
+New Jersey,65-74 years,White,799,3741,578,362,12,1025
+New Jersey,75-84 years,White,1349,5822,1031,660,21,1740
+New Jersey,85 years and over,White,2348,10479,1743,1080,30,3040
+New Jersey,25-34 years,Black,15,110,13,,,20
+New Jersey,35-44 years,Black,31,172,24,15,,41
+New Jersey,45-54 years,Black,99,422,72,52,,120
+New Jersey,55-64 years,Black,245,865,162,112,,296
+New Jersey,65-74 years,Black,331,1065,257,178,,411
+New Jersey,75-84 years,Black,393,1217,286,213,,468
+New Jersey,85 years and over,Black,267,1058,189,123,,337
+New Jersey,25-34 years,Asian,,13,,,0,
+New Jersey,35-44 years,Asian,,30,,,0,
+New Jersey,45-54 years,Asian,35,91,21,19,,39
+New Jersey,55-64 years,Asian,95,207,63,49,0,109
+New Jersey,65-74 years,Asian,127,317,85,69,0,143
+New Jersey,75-84 years,Asian,149,433,94,74,,172
+New Jersey,85 years and over,Asian,168,491,119,90,,199
+New Jersey,25-34 years,Hispanic,31,117,18,16,,34
+New Jersey,35-44 years,Hispanic,75,202,53,42,0,86
+New Jersey,45-54 years,Hispanic,201,399,117,97,,224
+New Jersey,55-64 years,Hispanic,353,709,235,193,,397
+New Jersey,65-74 years,Hispanic,352,760,240,195,,399
+New Jersey,75-84 years,Hispanic,417,961,303,229,,494
+New Jersey,85 years and over,Hispanic,338,997,278,195,,423
+New York,25-34 years,White,11,390,,,,15
+New York,35-44 years,White,17,526,20,,,33
+New York,45-54 years,White,119,1116,111,62,,171
+New York,55-64 years,White,385,3204,427,211,25,625
+New York,65-74 years,White,865,5619,857,449,34,1304
+New York,75-84 years,White,1387,8034,1328,689,36,2061
+New York,85 years and over,White,2359,13801,2233,1096,59,3550
+New York,25-34 years,Black,,102,,,0,11
+New York,35-44 years,Black,22,115,20,16,0,26
+New York,45-54 years,Black,62,258,47,31,,79
+New York,55-64 years,Black,234,689,146,111,,271
+New York,65-74 years,Black,319,875,247,171,,396
+New York,75-84 years,Black,370,975,268,204,,438
+New York,85 years and over,Black,255,860,199,129,,326
+New York,25-34 years,Asian,,13,,,,
+New York,35-44 years,Asian,,21,,,0,
+New York,45-54 years,Asian,16,42,2,,0,18
+New York,55-64 years,Asian,56,117,35,32,0,59
+New York,65-74 years,Asian,90,190,52,44,,100
+New York,75-84 years,Asian,89,234,69,46,0,112
+New York,85 years and over,Asian,59,219,50,29,,82
+New York,25-34 years,Hispanic,18,80,14,11,0,21
+New York,35-44 years,Hispanic,64,143,29,26,0,67
+New York,45-54 years,Hispanic,149,296,83,69,,166
+New York,55-64 years,Hispanic,264,461,167,143,0,288
+New York,65-74 years,Hispanic,287,528,191,151,0,327
+New York,75-84 years,Hispanic,235,539,177,134,,280
+New York,85 years and over,Hispanic,201,608,154,110,,249
+New York City,25-34 years,White,18,133,10,,0,22
+New York City,35-44 years,White,45,220,21,14,,55
+New York City,45-54 years,White,134,458,78,55,,159
+New York City,55-64 years,White,471,1208,237,173,35,539
+New York City,65-74 years,White,939,2391,497,367,44,1074
+New York City,75-84 years,White,1234,3266,688,487,37,1444
+New York City,85 years and over,White,1683,5710,1020,692,62,2026
+New York City,25-34 years,Black,40,159,23,16,,47
+New York City,35-44 years,Black,108,293,48,34,,123
+New York City,45-54 years,Black,306,741,152,120,37,339
+New York City,55-64 years,Black,854,1893,432,330,79,967
+New York City,65-74 years,Black,1242,2552,651,517,77,1385
+New York City,75-84 years,Black,1228,2733,695,517,58,1414
+New York City,85 years and over,Black,824,2435,466,328,40,972
+New York City,25-34 years,Asian,11,38,,,,11
+New York City,35-44 years,Asian,27,61,13,11,,29
+New York City,45-54 years,Asian,114,208,47,41,12,121
+New York City,55-64 years,Asian,283,517,124,103,27,307
+New York City,65-74 years,Asian,388,768,186,138,32,437
+New York City,75-84 years,Asian,394,922,239,166,25,469
+New York City,85 years and over,Asian,342,1165,212,126,14,431
+New York City,25-34 years,Hispanic,60,166,27,22,,65
+New York City,35-44 years,Hispanic,216,410,72,58,18,232
+New York City,45-54 years,Hispanic,465,815,184,142,41,511
+New York City,55-64 years,Hispanic,792,1424,356,292,64,863
+New York City,65-74 years,Hispanic,1164,2029,542,428,61,1284
+New York City,75-84 years,Hispanic,1178,2302,585,441,64,1331
+New York City,85 years and over,Hispanic,858,2271,449,288,42,1028
+New York City,25-34 years,Unknown,,23,,0,,
+New York City,35-44 years,Unknown,17,50,10,,0,20
+New York City,45-54 years,Unknown,71,138,37,29,,79
+New York City,55-64 years,Unknown,177,371,112,81,,209
+New York City,65-74 years,Unknown,270,555,133,93,,310
+New York City,75-84 years,Unknown,277,533,137,109,,305
+New York City,85 years and over,Unknown,198,444,82,62,,220
+Pennsylvania,25-34 years,White,,457,15,,,19
+Pennsylvania,35-44 years,White,,650,18,,,28
+Pennsylvania,45-54 years,White,41,1271,67,16,,97
+Pennsylvania,55-64 years,White,171,3267,240,74,19,356
+Pennsylvania,65-74 years,White,396,5699,500,164,20,752
+Pennsylvania,75-84 years,White,697,8019,762,291,53,1221
+Pennsylvania,85 years and over,White,1326,12591,1153,433,45,2090
+Pennsylvania,25-34 years,Black,,174,,0,0,
+Pennsylvania,35-44 years,Black,10,169,11,,,15
+Pennsylvania,45-54 years,Black,37,316,31,20,,51
+Pennsylvania,55-64 years,Black,117,793,75,46,10,154
+Pennsylvania,65-74 years,Black,196,980,112,74,,237
+Pennsylvania,75-84 years,Black,193,868,119,80,,237
+Pennsylvania,85 years and over,Black,210,960,120,80,,252
+Pennsylvania,25-34 years,Asian,,,,,0,
+Pennsylvania,35-44 years,Asian,,12,0,0,0,
+Pennsylvania,45-54 years,Asian,,22,0,0,0,
+Pennsylvania,55-64 years,Asian,14,61,1,,0,15
+Pennsylvania,65-74 years,Asian,18,86,14,10,,24
+Pennsylvania,75-84 years,Asian,28,128,20,,,43
+Pennsylvania,85 years and over,Asian,40,162,21,16,,46
+Pennsylvania,25-34 years,Hispanic,,66,,,0,
+Pennsylvania,35-44 years,Hispanic,,77,,,0,
+Pennsylvania,45-54 years,Hispanic,23,117,10,,0,28
+Pennsylvania,55-64 years,Hispanic,33,181,21,16,,39
+Pennsylvania,65-74 years,Hispanic,52,211,31,20,0,63
+Pennsylvania,75-84 years,Hispanic,52,205,25,17,,61
+Pennsylvania,85 years and over,Hispanic,37,182,29,19,0,47

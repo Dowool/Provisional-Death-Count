@@ -1,0 +1,85 @@
+state,sex,age,covid,tot_death,pneumonia,pneum_covid,influenza,pneu_flu_covid
+California,Male,25-34 years,16,1291,37,,,53
+California,Male,35-44 years,45,1608,97,24,10,128
+California,Male,45-54 years,95,2892,191,42,33,277
+California,Male,55-64 years,186,6509,510,103,68,661
+California,Male,65-74 years,305,9241,901,175,60,1090
+California,Male,75-84 years,357,10458,1144,220,56,1337
+California,Male,85 years and over,310,11598,1189,169,51,1381
+California,Female,25-34 years,,477,17,0,,27
+California,Female,35-44 years,17,771,46,,,65
+California,Female,45-54 years,37,1655,124,24,20,157
+California,Female,55-64 years,81,3884,314,43,46,398
+California,Female,65-74 years,155,6326,566,90,47,678
+California,Female,75-84 years,233,9464,871,149,69,1024
+California,Female,85 years and over,458,16897,1505,269,62,1756
+Massachusetts,Male,25-34 years,,246,,,,11
+Massachusetts,Male,35-44 years,19,355,15,,,34
+Massachusetts,Male,45-54 years,49,596,34,15,,71
+Massachusetts,Male,55-64 years,196,1490,174,91,16,294
+Massachusetts,Male,65-74 years,445,2370,356,168,18,651
+Massachusetts,Male,75-84 years,723,3065,530,282,25,996
+Massachusetts,Male,85 years and over,905,3529,624,357,20,1190
+Massachusetts,Female,25-34 years,,104,,,,10
+Massachusetts,Female,35-44 years,,169,,,0,11
+Massachusetts,Female,45-54 years,39,337,24,13,,52
+Massachusetts,Female,55-64 years,102,856,90,47,,151
+Massachusetts,Female,65-74 years,269,1638,208,106,10,381
+Massachusetts,Female,75-84 years,654,2937,462,260,19,875
+Massachusetts,Female,85 years and over,1482,6027,828,442,29,1895
+New Jersey,Male,25-34 years,44,338,28,25,,48
+New Jersey,Male,35-44 years,111,523,82,58,,136
+New Jersey,Male,45-54 years,329,1124,209,166,,379
+New Jersey,Male,55-64 years,750,2480,524,387,,894
+New Jersey,Male,65-74 years,1012,3507,738,511,11,1249
+New Jersey,Male,75-84 years,1260,4328,930,649,20,1558
+New Jersey,Male,85 years and over,1233,4828,1002,631,17,1621
+New Jersey,Female,25-34 years,18,152,17,11,,26
+New Jersey,Female,35-44 years,34,223,23,14,,44
+New Jersey,Female,45-54 years,99,543,74,47,,127
+New Jersey,Female,55-64 years,331,1380,243,169,,409
+New Jersey,Female,65-74 years,606,2399,428,297,,740
+New Jersey,Female,75-84 years,1059,4138,788,531,12,1327
+New Jersey,Female,85 years and over,1899,8222,1332,860,22,2391
+New York,Male,25-34 years,28,420,19,13,,36
+New York,Male,35-44 years,83,542,49,36,,98
+New York,Male,45-54 years,263,1135,185,134,,319
+New York,Male,55-64 years,639,2763,501,335,15,819
+New York,Male,65-74 years,1017,4215,837,520,26,1357
+New York,Male,75-84 years,1143,5077,1017,582,24,1600
+New York,Male,85 years and over,1131,5914,1141,570,28,1727
+New York,Female,25-34 years,12,174,,,0,15
+New York,Female,35-44 years,28,275,22,16,,36
+New York,Female,45-54 years,85,599,64,34,,117
+New York,Female,55-64 years,308,1745,280,166,13,434
+New York,Female,65-74 years,555,3044,516,300,11,782
+New York,Female,75-84 years,952,4750,832,495,19,1308
+New York,Female,85 years and over,1758,9624,1504,801,42,2497
+New York City,Male,25-34 years,92,362,46,35,,103
+New York City,Male,35-44 years,317,753,124,96,22,350
+New York City,Male,45-54 years,791,1634,362,282,69,875
+New York City,Male,55-64 years,1780,3591,852,662,145,1984
+New York City,Male,65-74 years,2629,5099,1297,1018,137,2913
+New York City,Male,75-84 years,2500,5331,1337,999,105,2847
+New York City,Male,85 years and over,1703,4630,993,670,74,2040
+New York City,Female,25-34 years,43,162,19,13,,50
+New York City,Female,35-44 years,97,287,40,28,,110
+New York City,Female,45-54 years,303,736,138,106,33,339
+New York City,Female,55-64 years,802,1835,410,317,67,907
+New York City,Female,65-74 years,1388,3227,718,531,86,1591
+New York City,Female,75-84 years,1820,4446,1010,724,86,2125
+New York City,Female,85 years and over,2208,7420,1242,830,88,2645
+Pennsylvania,Male,25-34 years,,488,12,,,20
+Pennsylvania,Male,35-44 years,15,589,19,,,28
+Pennsylvania,Male,45-54 years,77,1086,74,34,,122
+Pennsylvania,Male,55-64 years,211,2591,196,85,13,334
+Pennsylvania,Male,65-74 years,391,4002,379,160,14,624
+Pennsylvania,Male,75-84 years,532,4763,521,211,28,870
+Pennsylvania,Male,85 years and over,615,5163,527,232,14,923
+Pennsylvania,Female,25-34 years,,221,,,0,10
+Pennsylvania,Female,35-44 years,10,328,14,,,22
+Pennsylvania,Female,45-54 years,26,650,34,,,56
+Pennsylvania,Female,55-64 years,126,1728,146,54,17,234
+Pennsylvania,Female,65-74 years,275,2999,280,109,11,457
+Pennsylvania,Female,75-84 years,439,4476,407,186,35,695
+Pennsylvania,Female,85 years and over,1004,8746,800,320,34,1518
