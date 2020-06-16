@@ -37,6 +37,55 @@ finaldeathcounts$influenza[is.na(finaldeathcounts$influenza)] <- 0
 finaldeathcounts$pneu_flu_covid[is.na(finaldeathcounts$pneu_flu_covid)] <- 0
 
 
+############### Use various EDA and simple statistical analysis techniques to gain a deep understanding for the data. #############
+# Using summary() and str() for summary statistics
+summary(finaldeathcounts$covid)
+# Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+# 0.00   22.25   99.00  330.79  356.00 2629.00
+
+summary(finaldeathcounts$pneumonia)
+# Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+#  0.0    20.0    85.0   271.4   375.8  2233.0 
+
+summary(finaldeathcounts$influenza)
+# Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+# 0.00    0.00    0.00   14.39   20.75  145.00 
+
+str(finaldeathcounts)
+# 'data.frame':	266 obs. of  10 variables:
+# $ state         : Factor w/ 6 levels "California","Massachusetts",..: 1 1 1 1 1 1 1 1 1 1 ...
+# $ age           : Factor w/ 7 levels "25-34 years",..: 1 1 1 1 1 1 1 2 2 2 ...
+# $ race          : Factor w/ 6 levels "Asian","Black",..: NA 4 1 2 NA 6 3 4 1 NA ...
+# $ sex           : Factor w/ 2 levels "Female","Male": 2 NA NA NA 1 NA NA NA NA 1 ...
+# $ covid         : num  16 0 0 0 0 0 0 0 1 17 ...
+# $ tot_death     : num  1291 39 118 219 477 ...
+# $ pneumonia     : num  37 0 0 0 17 16 26 0 15 46 ...
+# $ pneum_covid   : num  0 0 0 0 0 0 0 0 0 0 ...
+# $ influenza     : num  0 0 0 0 0 0 0 0 0 0 ...
+# $ pneu_flu_covid: num  53 0 0 10 27 22 39 0 16 65 ...
+
+
+# Variable correlation with cor() in R. 
+# The Pearson correlation assumes the random variables to be 
+# normally distributed.
+
+# highly correlated variables
+cor(finaldeathcounts$covid, finaldeathcounts$pneumonia)
+# [1] 0.8613225
+
+cor(finaldeathcounts$covid, finaldeathcounts$influenza)
+# [1] 0.7209334
+
+cor(finaldeathcounts$pneumonia, finaldeathcounts$influenza)
+# [1] 0.7316998
+
+# Example: weak correlation, negative correlation: larger Wind 
+# tends to have smaller Temp
+cor(airquality$Wind, airquality$Temp, method="pearson")
+# [1] -0.4579879
+
+
+
 ##################### SUMMARY STATISTICS #####################
 
 ## Box Plot (Deaths Counts by Race)
@@ -48,6 +97,7 @@ counts_by_race$sex <- NULL
 ## Order of Race Group
 counts_by_race$race <- factor(counts_by_race$race, levels = c("White", "Black", "Asian", "Hispanic", "More race"))
 
+##  Box Plot (Deaths Counts by Race)
 boxplot(finaldeathcounts$covid~finaldeathcounts$race, main = "COVID-19 Deaths by Race", xlab = "Race", ylab = "Count", col = "skyblue")
 boxplot(finaldeathcounts$pneumonia~finaldeathcounts$race, main = "Pneumonia Deaths by Race", xlab = "Race", ylab = "Count", col = "orange")
 boxplot(finaldeathcounts$influenza~finaldeathcounts$race, main = "Influenza Deaths by Race", xlab = "Race", ylab = "Count", col = "yellow")
@@ -95,6 +145,121 @@ hist(ihme$newICU_mean[ihme$state == "New York"], col = rgb(1,0,1,0.5), main = "A
 hist(ihme$newICU_mean[ihme$state == "Pennsylvania"], col = rgb(0,1,1,0.5), main = "Average New Daily ICU Admission in Pennsylvania", xlab = "Pennsylvania(06/01 - 08/04/2020)", xlim = c(0, 150), breaks = 10)
 hist(ihme$newICU_mean[ihme$state == "United States of America"], col = rgb(1,1,0,0.5), main = "Average New Daily ICU Admission in United States", xlab = "United States(06/01 - 08/04/2020)", xlim = c(0, 1500), breaks = 10)
 
+library(UsingR)
+
+#plot pneumonia by covid
+#ok
+plot(finaldeathcounts$pneumonia, finaldeathcounts$covid)
+
+#only transformation that works
+plot(sqrt(finaldeathcounts$pneumonia), finaldeathcounts$covid, col="green", pch=19)
+#not good
+plot((finaldeathcounts$pneumonia)^2, finaldeathcounts$covid)
+#not good
+plot(log(finaldeathcounts$pneumonia), finaldeathcounts$covid)
+
+
+#plot influenza by covid; no linear relationship
+plot(finaldeathcounts$influenza, finaldeathcounts$covid)
+
+plot(log(finaldeathcounts$influenza), finaldeathcounts$covid)
+#not good
+plot(sqrt(finaldeathcounts$influenza), finaldeathcounts$covid)
+#not good
+plot((finaldeathcounts$influenza)^2, finaldeathcounts$covid)
+
+
+# from the above plots,these variables will be used for the diagnostic plots
+# finaldeathcounts$pneumonia, finaldeathcounts$covid, sqrt(finaldeathcounts$pneumonia)
+
+m0 <- lm(covid ~ pneumonia + influenza, data = finaldeathcounts)
+summary(m0)
+
+# delete influenza, it is not significant
+# Call:
+#   lm(formula = covid ~ pneumonia + influenza, data = finaldeathcounts)
+
+# Residuals:
+#   Min       1Q   Median       3Q      Max 
+# -1362.78   -16.22     1.05    69.01   820.31 
+
+# Coefficients:
+#   Estimate Std. Error t value Pr(>|t|)    
+# (Intercept) 12.88791   19.00980   0.678    0.498    
+# pneumonia    0.95608    0.05903  16.198  < 2e-16 ***
+# influenza    4.05666    0.92171   4.401 1.57e-05 ***
+#  ---
+#  Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+# Residual standard error: 252.5 on 263 degrees of freedom
+# Multiple R-squared:  0.7596,	Adjusted R-squared:  0.7578 
+# F-statistic: 415.5 on 2 and 263 DF,  p-value: < 2.2e-16
+
+plot(finaldeathcounts$pneumonia, finaldeathcounts$covid, col="green", pch=19)
+
+m1 <- lm(covid~pneumonia, data = finaldeathcounts)
+summary(m1)
+
+#significant, adjusted r^2 = 0.7409
+par(mfrow = c(1,1))
+plot(m1)
+
+## Residuals vs Fitted
+# Because residuals have non-linear patterns and equally spread around a horizontal line without distinct patterns. 
+# This is a good indication this doesn’t have non-linear relationships.
+
+##  Normal Q-Q
+# The plot should show if residuals are not normally distributed. 
+# This plot concerns me because of the larger value observations at the end than what we would expect under the standard modeling assumptions.
+
+##  Scale-Location
+# The  plot should show if residuals are spread equally along with the ranges of predictors. 
+# In the plot, because the residuals spread wider, the red smooth line is not horizontal and shows a steep angle.
+
+## Resideuals vs Leverage
+# The points I need to focus on are values in the upper right or lower right corners, which are outside the red dashed Cook’s distance line because these are points that would be influential in the model and removing them would likely noticeably alter the regression results. 
+# qqplot is off, cooks distance is off by 47 & 48
+
+
+# FINAL MODEL
+m2 <- lm(finaldeathcounts$covid ~ I(sqrt(finaldeathcounts$pneumonia)))
+summary(m2)
+# Call:
+#   lm(formula = finaldeathcounts$covid ~ I(sqrt(finaldeathcounts$pneumonia)))
+
+# Residuals:
+#   Min       1Q   Median       3Q      Max 
+# -1009.29   -95.08     5.44   130.21  1359.76 
+
+# Coefficients:
+#   Estimate Std. Error t value Pr(>|t|)    
+# (Intercept)                         -173.156     27.098   -6.39 7.47e-10 ***
+#   I(sqrt(finaldeathcounts$pneumonia))   40.051      1.645   24.35  < 2e-16 ***
+#   ---
+#   Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+# Residual standard error: 285.3 on 264 degrees of freedom
+# Multiple R-squared:  0.6919,	Adjusted R-squared:  0.6908 
+# F-statistic:   593 on 1 and 264 DF,  p-value: < 2.2e-16
+
+#significant, adjusted r^2 = 0.6908 
+plot(m2)
+
+## Residuals vs Fitted
+# Because residuals have non-linear patterns and equally spread around a horizontal line without distinct patterns. 
+# This is a good indication this doesn’t have non-linear relationships.
+
+##  Normal Q-Q
+# The plot should show if residuals are not normally distributed. 
+# This plot concerns me because of the larger value observations at the end than what we would expect under the standard modeling assumptions.
+
+##  Scale-Location
+# The  plot should show if residuals are spread equally along with the ranges of predictors. 
+# In the plot, because the residuals spread wider, the red smooth line is not horizontal and shows a steep angle.
+
+## Resideuals vs Leverage
+# The points I need to focus on are values in the upper right or lower right corners, which are outside the red dashed Cook’s distance line because these are points that would be influential in the model and removing them would likely noticeably alter the regression results. 
+# There are no point beyond the cook's distance
 
 write.csv(finaldeathcounts,file = "finaldeathcounts.csv")
 
